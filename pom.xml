@@ -47,6 +47,7 @@
         <artifactId>jib-maven-plugin</artifactId>
         <version>${jib-maven-plugin.version}</version>
         <configuration>
+          <!-- Comment <from> section below to switch to distroless base image -->
           <from>
             <image>belaban/alpine</image>
           </from>
@@ -58,7 +59,24 @@
           </to>
           <container>
             <mainClass>org.jgroups.stack.GossipRouter</mainClass>
-            <ports>12001</ports>
+            <args>
+              <arg>-bind_addr</arg>
+              <arg>0.0.0.0</arg>
+            </args>
+            <!--mainClass>org.jgroups.gossiprouter.Main</mainClass-->
+
+            <!--entrypoint>[java, -cp, /app/resources:/app/classes:/app/libs/*, org.jgroups.stack.GossipRouter]</entrypoint-->
+
+            <jvmFlags>
+              <!-- log4j2.xml just needs to be somewhere in the classpath -->
+              <!--jvmFlag>-Dlog4j.configurationFile=/app/resources/log4j2.xml</jvmFlag-->
+              <jvmFlag>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=localhost:8787</jvmFlag>
+            </jvmFlags>
+            <ports>
+              <port>12001</port>
+              <port>8787</port> <!-- for debugging -->
+            </ports>
+
           </container>
         </configuration>
         <executions>
