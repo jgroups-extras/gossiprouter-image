@@ -74,6 +74,7 @@
             </jvmFlags>
             <ports>
               <port>12001</port>
+              <port>9000</port> <!-- for testing, e.g. nc -l 9000 -->
               <port>8787</port> <!-- for debugging -->
             </ports>
 
