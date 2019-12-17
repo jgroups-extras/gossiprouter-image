@@ -60,6 +60,8 @@
           <container>
             <mainClass>org.jgroups.stack.GossipRouter</mainClass>
             <args>
+              <arg>-nio</arg>
+              <arg>false</arg>
               <arg>-bind_addr</arg>
               <arg>0.0.0.0</arg>
             </args>
