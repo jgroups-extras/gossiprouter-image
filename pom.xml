@@ -11,7 +11,7 @@
     <maven.compiler.target>8</maven.compiler.target>
     <maven.compiler.source>8</maven.compiler.source>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <jib-maven-plugin.version>1.8.0</jib-maven-plugin.version>
+    <jib-maven-plugin.version>2.3.0</jib-maven-plugin.version>
     <jgroups.version>4.1.8.Final</jgroups.version>
     <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
   </properties>
