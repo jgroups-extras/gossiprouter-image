@@ -56,6 +56,7 @@
           </from-->
           <to>
             <image>docker.io/belaban/gossiprouter</image>
+            <tags>1.0</tags>
           </to>
           <container>
             <mainClass>org.jgroups.stack.GossipRouter</mainClass>
