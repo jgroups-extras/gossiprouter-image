@@ -49,7 +49,7 @@
         <configuration>
           <!-- Comment <from> section below to switch to distroless base image -->
           <from>
-            <image>belaban/alpine</image>
+            <image>adoptopenjdk/openjdk11</image>
           </from>
           <!--from>
               <image>openjdk</image>
