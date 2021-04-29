@@ -1,0 +1,19 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.google.cloud.tools:jib-maven-plugin
+    versions:
+    - 2.7.1
+    - 2.8.0
+  - dependency-name: org.jgroups:jgroups
+    versions:
+    - 5.1.4.Final
+    - 5.1.5.Final
+  - dependency-name: org.apache.logging.log4j:log4j-api
+    versions:
+    - 2.14.0
